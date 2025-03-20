@@ -1,5 +1,5 @@
 <template>
-    <div class="flex-1 flex items-center justify-center h-screen bg-gray-50 ml-96">
+    <div class="flex items-center justify-center h-screen bg-gray-50">
         <div class="max-w-md w-full p-8 bg-white rounded-xl shadow-lg animate-fadeIn">
             <div class="text-center mb-6">
                 <div class="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-teal-50 text-teal-600">
