@@ -68,13 +68,13 @@
                                             <!-- S&P 500 -->
                                             <div class="p-3 bg-white rounded-lg border border-gray-100 shadow-sm">
                                                 <div class="text-xs text-gray-500 uppercase tracking-wide">S&P 500</div>
-                                                <div class="mt-1 text-lg font-bold text-blue-600">+{{ benchmarkData.sp500 }}%</div>
+                                                <div class="mt-1 text-lg font-bold text-blue-600">{{ benchmarkData.sp500 }}%</div>
                                             </div>
                                             
                                             <!-- Portfolio -->
                                             <div class="p-3 bg-white rounded-lg border border-gray-100 shadow-sm">
                                                 <div class="text-xs text-gray-500 uppercase tracking-wide truncate">{{ currentPortfolioName }}</div>
-                                                <div class="mt-1 text-lg font-bold text-indigo-600">+{{ benchmarkData.portfolio }}%</div>
+                                                <div class="mt-1 text-lg font-bold text-indigo-600">{{ benchmarkData.portfolio }}%</div>
                                             </div>
                                             
                                             <!-- Difference -->
@@ -84,7 +84,7 @@
                                                     class="mt-1 text-lg font-bold"
                                                     :class="benchmarkData.portfolio > benchmarkData.sp500 ? 'text-green-600' : 'text-red-600'"
                                                 >
-                                                    {{ benchmarkData.portfolio > benchmarkData.sp500 ? '+' : '' }}{{ benchmarkData.portfolio - benchmarkData.sp500 }}%
+                                                    {{ benchmarkData.portfolio > benchmarkData.sp500 ? '+' : '' }}{{ (benchmarkData.portfolio - benchmarkData.sp500).toFixed(2) }}%
                                                 </div>
                                             </div>
                                         </div>
@@ -135,8 +135,8 @@ export default {
             selectedPortfolioIndex: 0,
             showComparison: false,
             benchmarkData: {
-                sp500: 7,
-                portfolio: 4
+                sp500: -12.40,
+                portfolio: -15
             },
             europeanBankingETFPrices: [
                 23.45, 23.67, 24.12, 23.98, 24.35, 25.45, 24.78, 24.56,
